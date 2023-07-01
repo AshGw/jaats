@@ -12,7 +12,7 @@ pub struct Claims {
 
 impl Claims {
     pub fn new(email: &str, scope: HashMap<String, String>, expiration_days: i64) -> Self {
-        let current_time = Utc::now().timestamp();
+        let current_time: i64 = Utc::now().timestamp();
         Claims {
             email: email.to_string(),
             scope,
