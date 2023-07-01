@@ -2,13 +2,12 @@
 mod models;
 mod jaats;
 mod cli;
-use structopt::StructOpt;
 use std::collections::HashMap;
 use crate::jaats::{jwt_encode, jwt_decode};
-use crate::cli::Cli;
+use crate::cli::{Cli, get_args};
 
 fn main() {
-    let args: Cli = Cli::from_args();
+    let args: Cli = get_args();
 
     match args {
         Cli::Encode { email, scopes, algorithm, secret, expiration_days } => {

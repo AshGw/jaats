@@ -32,3 +32,7 @@ pub enum Cli {
         secret: String,
     },
 }
+
+pub fn get_args() -> Cli{
+    return Cli::from_args();
+}
