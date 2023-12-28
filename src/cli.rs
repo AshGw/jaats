@@ -1,12 +1,12 @@
-use structopt::StructOpt;
 use jsonwebtoken::Algorithm;
+use structopt::StructOpt;
 
 #[derive(StructOpt, Debug)]
 pub enum Cli {
     #[structopt(name = "encode")]
     Encode {
-        #[structopt(long = "email")]
-        email: String,
+        #[structopt(long = "identifier")]
+        identifier: String,
 
         #[structopt(long = "scopes")]
         scopes: String,
@@ -33,6 +33,6 @@ pub enum Cli {
     },
 }
 
-pub fn get_args() -> Cli{
-    return Cli::from_args();
+pub fn get_args() -> Cli {
+    Cli::from_args()
 }

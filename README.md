@@ -1,7 +1,7 @@
 **To Encode a payload run:**
 ```bash
 cargo run -- encode \
-  --email 'drip@check.com' \
+  --identifier 'drip@check.com' \
   --scopes key1=value1,key2=value2,key54=value54 \
   --secret anything \
   --algorithm HS256 \
