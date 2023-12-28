@@ -21,7 +21,7 @@ It should look like something similar to this
 - Payload
 ```json
 {
-  "email": "drip@check.com",
+  "identifier": "drip@check.com",
   "scope": {
     "key54": "value54",
     "key2": "value2",
